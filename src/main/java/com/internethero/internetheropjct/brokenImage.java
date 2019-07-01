@@ -1,6 +1,4 @@
 package com.internethero.internetheropjct;
-
-
 import static org.testng.Assert.assertEquals;
 
 import java.util.List;
@@ -15,6 +13,11 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class brokenImage {
+	
+	
+	String image;
+	public static void main(String[] args)
+	{
 
 	System.setProperty("webdriver.chrome.driver","E:\\Drivers\\win_chromedriver.exe");
 	WebDriver driver = new ChromeDriver();
@@ -23,7 +26,7 @@ public class brokenImage {
     List <WebElement>  naturalWidth = driver.findElements(By.tagName("img"));
 
 	
-	public void isImageBroken(WebElement image)
+	public static void isimagebroken(String image)
 	{
 	    if (image.getAttribute("naturalWidth").equals("0"))
 	    {
@@ -42,4 +45,5 @@ public class brokenImage {
 	
 	
 
+}
 }
