@@ -29,6 +29,7 @@ public class CommonLibrary {
 	
 	@SuppressWarnings("deprecation")
 	public static void openFireFoxBrowser(String URL, String platform){
+		
 		switch(platform) {
 		case "windows":
 			System.setProperty("webdriver.gecko.driver", browser+"win_firefoxdriver.exe");
