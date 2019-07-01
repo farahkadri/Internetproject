@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 
 public class slider {
-@Test
+
 	public static void main(String[] args)
 	{
     System.setProperty("webdriver.chrome.driver","E:\\Drivers\\win_chromedriver.exe");

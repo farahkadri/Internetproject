@@ -1,12 +1,4 @@
 package com.internethero.internetheropjct;
-
-public class hoverPictures {
-
-}
-
-package farah.automation;
-
-import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,32 +6,47 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
-public class Basicauth {
-@Test
-	public static void main(String[] args)
-	{/**
-		System.setProperty("webdriver.chrome.driver","C:/Users/umul/Downloads/apiTest/chromedriver.exe");
+public class hoverPictures {
+
+
+public static void main(String[] args)
+	{
+	    System.setProperty("webdriver.chrome.driver","E:\\Drivers\\win_chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		System.out.println("i m in chrome");
-		//To handle chrome authentication popup pass the username and password in the URL,since elements are not identified using locators
-		driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+		driver.get("https://the-internet.herokuapp.com/hovers");
 		System.out.println("i m here");
-		String actual = driver.findElement(By.cssSelector("#content > div > p")).getText();
-		Assert.assertEquals(actual, "Congratulations! You must have the proper credentials.");
-		System.out.println("I m not here");**/
-		System.setProperty("webdriver.chrome.driver","C:/Users/umul/Downloads/apiTest/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://the-internet.herokuapp.com/horizontal_slider");
-		WebElement Slide = driver.findElement(By.cssSelector("#content > div > div"));
-		Actions builder = new Actions(driver);
-		Action dragslider = builder.dragAndDropBy(Slide, 5, 0).build();
-		((Actions)dragslider).perform();
-		String Maxelementnum = driver.findElement(By.cssSelector("#range")).getText();
-		Assert.assertEquals(Maxelementnum, "5");
-		System.out.println("verified");
-	}
+        WebElement element = driver.findElement(By.cssSelector(" #content > div > div:nth-child(3) > img"));
+        WebElement element1 = driver.findElement(By.cssSelector(" #content > div > div:nth-child(4) > img"));
+        WebElement element2 = driver.findElement(By.cssSelector(" #content > div > div:nth-child(5) > img"));
+
+
+        Actions action = new Actions(driver);
+        action.moveToElement(element).build().perform();
+		System.out.println("got that");
+       // driver.findElement(By.linkText("iPads")).click();
+		String actual = driver.findElement(By.cssSelector("#content > div > div:nth-child(3) > div > h5 ")).getText();
+		Assert.assertEquals(actual, "name: user1");
+		System.out.println("It matched user 1");
+		
+		action.moveToElement(element1).build().perform();
+		System.out.println("got that");
+		String actual1 = driver.findElement(By.cssSelector("#content > div > div:nth-child(4) > div > h5 ")).getText();
+		Assert.assertEquals(actual, "name: user2");
+		System.out.println("It matched user 2");
+		
+		action.moveToElement(element2).build().perform();
+		System.out.println("got that");
+       // driver.findElement(By.linkText("iPads")).click();
+		String actual2 = driver.findElement(By.cssSelector(" #content > div > div:nth-child(5) > div > h5")).getText();
+		Assert.assertEquals(actual, "name: user3");
+		System.out.println("It matched user 3");
+		
+		driver.close();
+
+
+			}
 
 	
 }

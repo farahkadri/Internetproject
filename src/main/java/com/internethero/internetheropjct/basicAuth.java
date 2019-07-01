@@ -11,7 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class basicAuth {
-@Test
+
 	public static void main(String[] args)
 	{
 		System.setProperty("webdriver.chrome.driver","E:\\Drivers\\win_chromedriver.exe");
@@ -22,7 +22,8 @@ public class basicAuth {
 		System.out.println("i m here");
 		String actual = driver.findElement(By.cssSelector("#content > div > p")).getText();
 		Assert.assertEquals(actual, "Congratulations! You must have the proper credentials.");
-		System.out.println("I m not here");
+		System.out.println("You are done");
+		driver.close();
 		
 	}
 
