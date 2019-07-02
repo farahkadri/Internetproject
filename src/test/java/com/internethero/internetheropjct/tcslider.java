@@ -14,7 +14,7 @@ public class tcslider
 
 	WebDriver driver;
     
-	@BeforeMethod
+	@BeforeClass
 	public void setUp() {
 		System.setProperty("webdriver.chrome.driver","E:\\Drivers\\win_chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
@@ -39,7 +39,7 @@ public class tcslider
 
 	}
 	
-	@AfterMethod
+	@AfterClass
 	public void tearDown()
 	{
 		driver.close();
