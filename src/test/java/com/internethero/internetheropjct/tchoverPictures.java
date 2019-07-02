@@ -31,7 +31,6 @@ public class tchoverPictures {
         Actions action = new Actions(driver);
         action.moveToElement(element).build().perform();
 		System.out.println("got that");
-       // driver.findElement(By.linkText("iPads")).click();
 		String actual = driver.findElement(By.cssSelector("#content > div > div:nth-child(3) > div > h5 ")).getText();
 		Assert.assertEquals(actual, "name: user1");
 		System.out.println("It matched user 1");
