@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<test name="Basic Auth">
+    <classes>
+      <class name="com.internethero.internetheropjct.tcbasicAuth"/>
+    </classes>
+ </test>
+
+  <test name="Broken Image">
+    <classes>
+      <class name="com.internethero.internetheropjct.tcbrokenImage"/>
+    </classes>
+ </test>
+ 
+ <test name="Hover Pictures">
+    <classes>
+      <class name="com.internethero.internetheropjct.tchoverPictures"/>
+    </classes>
+ </test>
+ 
+ <test name="Slider">
+    <classes>
+      <class name="com.internethero.internetheropjct.tcslider"/>
+    </classes>
+ </test>
+ 
+</suite>
