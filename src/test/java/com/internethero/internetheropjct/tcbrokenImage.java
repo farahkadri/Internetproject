@@ -31,7 +31,6 @@ public class tcbrokenImage {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com/broken_images");
 
-
 	}
 
 	@Test
